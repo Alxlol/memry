@@ -1,1 +1,5 @@
-<h1>Hello play</h1>
+<script>
+	import Grid from "../../lib/components/grid/Grid.svelte";
+
+</script>
+<Grid/>
