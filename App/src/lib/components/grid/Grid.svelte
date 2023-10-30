@@ -1,10 +1,8 @@
 <script>
 	import GridButton from "./GridButton.svelte";
-
+    const gridSize = 4;
+    
+    
 </script>
 
-<div class="flex gap-2">
-    <GridButton/>
-    <GridButton/>
-    <GridButton/>
-</div>
+
