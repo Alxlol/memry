@@ -1,14 +1,15 @@
 <script>
+
     export let visible = true;
-    export let index;
+    export let ID;
 
     function onClick() {
-        visible = !visible;
+        
     }
 </script>
 
 <button on:click={onClick} class="w-20 h-20 bg-blue-500">
     {#if visible}
-        {index}
+        {ID}
     {/if}
 </button>
