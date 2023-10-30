@@ -1,15 +1,20 @@
 <script>
-	import { generateGrid } from './Grid'
-    import GridButton from './GridButton.svelte'
+    let content = 
+    [
+        { 'src': 'cat' },
+        { 'src': 'dog' },
+        { 'src': 'car' },
+        { 'src': 'house' },
+        { 'src': 'tv' },
+        { 'src': 'sofa' },
+        { 'src': 'window' },
+        { 'src': 'chair' },   
+    ]
 
-    const grid = generateGrid();
-    console.log(grid)
+    let cards = [...content, ...content]
+        .sort(() => Math.random() - 0.5)
+        .map((card) => ({...card, id: Math.random()}))
+
+
+    console.log(cards)
 </script>
-
-<div class="grid gap-2 grid-cols-4">
-    {#each grid as ID }
-        <GridButton {ID} />
-    {/each}
-</div>
-
-
