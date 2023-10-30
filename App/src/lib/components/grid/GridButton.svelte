@@ -1,5 +1,5 @@
 <script>
-    export let visible = false;
+    export let visible = true;
     export let index;
 
     function onClick() {
