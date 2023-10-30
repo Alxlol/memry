@@ -1,3 +1,4 @@
 import { writable } from 'svelte/store';
 
-const selectedTile = writable();
+export const firstSelection = writable();
+export const secondSelection = writable();
