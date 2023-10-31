@@ -1,14 +1,22 @@
 <script>
 	import GridCard from "./GridCard.svelte";
-    import { gridCards } from './GridCards'
+    import { cards } from './GridCards'
     import { firstSelection, secondSelection } from '../../stores/gameState'
     
-    let cards = [...gridCards, ...gridCards]
-        .sort(() => Math.random() - 0.5)
-    console.log(cards)
-
     const handleChoice = (card) => {
-        console.log(card)
+        $firstSelection ? secondSelection.set(card) : firstSelection.set(card)
+        if ($firstSelection && $secondSelection) {
+          if ($firstSelection.src === $secondSelection.src) {
+            console.log('match');
+          }  else console.log('nomatch');
+          
+          setTimeout(() => resetTurn(), 2000)
+        }
+    }
+
+    function resetTurn() {
+        secondSelection.set(null)
+        firstSelection.set(null)
     }
 </script>
 
@@ -17,8 +25,6 @@
         <GridCard 
         {card}
         flipped={card === $firstSelection || card === $secondSelection}
-        {handleChoice} 
-        
-        />
+        {handleChoice} />
     {/each}
 </div>
