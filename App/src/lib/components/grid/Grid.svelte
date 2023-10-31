@@ -1,21 +1,10 @@
 <script>
 	import GridCard from "./GridCard.svelte";
-
-    let content = 
-    [
-        { 'src': 'cat' },
-        { 'src': 'dog' },
-        { 'src': 'car' },
-        { 'src': 'house' },
-        { 'src': 'tv' },
-        { 'src': 'sofa' },
-        { 'src': 'window' },
-        { 'src': 'chair' },   
-    ]
-
-    let cards = [...content, ...content]
+    import { gridCards } from './GridCards'
+    
+    let cards = [...gridCards, ...gridCards]
         .sort(() => Math.random() - 0.5)
-
+    console.log(cards)
 </script>
 
 <div class="grid gap-2 grid-cols-4">
