@@ -3,7 +3,7 @@
     import { firstSelection, secondSelection, cards, resetTurn } from '../../stores/gameState'
 	import GameOver from "../GameOver.svelte";
 
-    let gameOver = true;
+    let gameOver = false;
     const handleSelection = (card) => {
         $firstSelection ? secondSelection.set(card) : firstSelection.set(card)
     }
@@ -38,6 +38,8 @@
         }
         return true;
     }
+
+    
 </script>
 
 <div class="grid gap-2 grid-cols-4">
