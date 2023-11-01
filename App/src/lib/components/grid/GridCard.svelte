@@ -20,8 +20,9 @@
     }
 </script>
 
-<button disabled={flipped || disabled} on:click={handleClick} class="w-16 h-16 sm:w-28 sm:h-28 bg-blue-500 rounded-md {flipped ? 'border-2 border-green-400' : ''} ">
+<button disabled={flipped || disabled} on:click={handleClick} class="w-16 h-16 sm:w-28 sm:h-28 rounded-md bg-gradient-to-br to-blue-600 from-green-400 {disabled || flipped ? '' : 'hover:scale-105 transition-all'}
+{flipped ? 'border-2 border-green-400' : ''} ">
     {#if flipped}
-        <img transition:fade={{duration: 300}} class="overflow-hidden rounded-md" src={card.src} alt="">
+        <img transition:fade={{ duration: 300}} class="overflow-hidden rounded-md" src={card.src} alt="">
     {/if}
 </button>
