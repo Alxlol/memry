@@ -41,6 +41,13 @@
     
 </script>
 
+<svelte:head>
+    //Preload all card images
+    {#each $cards as card}
+      <link rel="preload" as="image" href={card.src} />
+    {/each}
+</svelte:head>
+
 <div class="grid gap-2 grid-cols-4">
     {#each $cards as card}
         <GridCard 
