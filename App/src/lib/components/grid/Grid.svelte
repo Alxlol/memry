@@ -20,9 +20,10 @@
             resetTurn() 
             gameOver = checkForGameOver()
             
-
         } else {
-            setTimeout(() => resetTurn(), 1000)
+            setTimeout(() => {
+                resetTurn()
+            }, 1000 )
         }
 
     }
