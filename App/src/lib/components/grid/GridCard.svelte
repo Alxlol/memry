@@ -19,8 +19,8 @@
     }
 </script>
 
-<button disabled={flipped || disabled} on:click={handleClick} class="w-24 h-24 bg-blue-500 rounded-md {flipped ? 'border-2 border-green-400' : ''} ">
+<button disabled={flipped || disabled} on:click={handleClick} class="w-16 h-16 sm:w-28 sm:h-28 bg-blue-500 rounded-md {flipped ? 'border-2 border-green-400' : ''} ">
     {#if flipped}
-        {card.src}
+        <img class="overflow-hidden rounded-md" src={card.src} alt="">
     {/if}
 </button>

@@ -1,8 +1,9 @@
 <script>
 	import GridCard from "./GridCard.svelte";
     import { firstSelection, secondSelection, cards, resetTurn } from '../../stores/gameState'
+	import GameOver from "../GameOver.svelte";
 
-    let gameOver = false;
+    let gameOver = true;
     const handleSelection = (card) => {
         $firstSelection ? secondSelection.set(card) : firstSelection.set(card)
     }
@@ -48,5 +49,5 @@
     {/each}
 </div>
 {#if gameOver}
-    <p>GAME OVER</p>
+    <GameOver />
 {/if}

@@ -4,14 +4,14 @@ export const firstSelection = writable(null);
 export const secondSelection = writable(null);
 
 export let gridCards = [
-	{ src: 'cat', matched: false },
-	{ src: 'dog', matched: false },
-	{ src: 'car', matched: false },
-	{ src: 'house', matched: false },
-	{ src: 'tv', matched: false },
-	{ src: 'sofa', matched: false },
-	{ src: 'window', matched: false },
-	{ src: 'chair', matched: false }
+	{ src: 'img/Tex_bone_12_b.PNG', matched: false },
+	{ src: 'img/Tex_cloth_08_b.PNG', matched: false },
+	{ src: 'img/Tex_container_02_b.PNG', matched: false },
+	{ src: 'img/Tex_container_04_b.PNG', matched: false },
+	{ src: 'img/Tex_container_05_b.PNG', matched: false },
+	{ src: 'img/Tex_container_08_b.PNG', matched: false },
+	{ src: 'img/Tex_gemstone_02_b.PNG', matched: false },
+	{ src: 'img/Tex_herbs_04_b.PNG', matched: false }
 ];
 
 export let cards = writable(
