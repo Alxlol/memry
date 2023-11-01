@@ -31,7 +31,6 @@
 
     function checkForGameOver() {
         for (let index = 0; index < $cards.length - 1; index++) {
-            console.log($cards[index])
             if ($cards[index].matched === false) {
                 return false
             } 

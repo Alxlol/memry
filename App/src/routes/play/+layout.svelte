@@ -2,4 +2,5 @@
     
 </script>
 
-<slot />
+
+    <slot />

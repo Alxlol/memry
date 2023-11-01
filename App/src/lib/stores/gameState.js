@@ -5,10 +5,10 @@ export const secondSelection = writable(null);
 
 export let gridCards = [
 	{ src: 'img/Tex_bone_12_b.PNG', matched: false },
-	{ src: 'img/Tex_cloth_08_b.PNG', matched: false },
+	{ src: 'img/Tex_tools_10_b.PNG', matched: false },
 	{ src: 'img/Tex_container_02_b.PNG', matched: false },
-	{ src: 'img/Tex_container_04_b.PNG', matched: false },
-	{ src: 'img/Tex_container_05_b.PNG', matched: false },
+	{ src: 'img/Tex_mushrooms_11_b.PNG', matched: false },
+	{ src: 'img/Tex_reagent_06_b.PNG', matched: false },
 	{ src: 'img/Tex_container_08_b.PNG', matched: false },
 	{ src: 'img/Tex_gemstone_02_b.PNG', matched: false },
 	{ src: 'img/Tex_herbs_04_b.PNG', matched: false }
