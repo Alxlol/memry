@@ -11,7 +11,7 @@
         handleSelection(card)
     }
 
-    //Disabled all cards when both selections have been done
+    //Disabled all cards for 1s when both selections have been done
     $: if ($firstSelection && $secondSelection) {
         disabled = true
         setTimeout(() => {
@@ -20,7 +20,9 @@
     }
 </script>
 
-<button disabled={flipped || disabled} on:click={handleClick} class="w-16 h-16 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-md bg-gradient-to-br to-blue-600 from-green-400 {disabled || flipped ? '' : 'hover:scale-105 transition-all'} ">
+<button disabled={flipped || disabled} on:click={handleClick} class="w-16 h-16 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-md bg-gradient-to-br to-blue-600 from-green-400 transition-all {disabled || flipped ? '' : 'hover:scale-105'}
+{card.matched ? 'border-2 border-green-400' : ''}
+">
     {#if flipped}
         <img transition:fade={{ duration: 300}} class="overflow-hidden rounded-md" src={card.src} alt="">
     {/if}
