@@ -9,6 +9,7 @@
     }
 
     $: if ($firstSelection && $secondSelection) {
+        //Compare selections
         if ($firstSelection.src === $secondSelection.src) {
             cards.update((cards) => cards.map(card => {
                 if (card.src === $firstSelection.src) {

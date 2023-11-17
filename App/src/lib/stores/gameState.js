@@ -14,6 +14,7 @@ export let gridCards = [
 	{ src: 'img/Tex_herbs_04_b.PNG', matched: false }
 ];
 
+// Creates an array of gridCards x2 then shuffles the array and gives each item a random ID
 export let cards = writable(
 	[...gridCards, ...gridCards]
 		.sort(() => Math.random() - 0.5)
