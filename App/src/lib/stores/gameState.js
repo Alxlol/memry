@@ -17,7 +17,9 @@ export let gridCards = [
 // Creates an array of gridCards x2 then shuffles the array and gives each item a random ID
 export let cards = writable(
 	[...gridCards, ...gridCards]
+		//Shuffles the array
 		.sort(() => Math.random() - 0.5)
+		//Adds random id
 		.map((card) => ({ ...card, id: Math.random() }))
 );
 

@@ -1,6 +1,5 @@
 <script>
     import { goto } from '$app/navigation';
-
     function onClickPlay() {
         goto('/play');
     }
