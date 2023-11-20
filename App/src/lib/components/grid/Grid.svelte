@@ -43,7 +43,6 @@
 </script>
 
 <svelte:head>
-    <!-- Preload all card images -->
     {#each $cards as card}
       <link rel="preload" as="image" href={card.src} />
     {/each}
